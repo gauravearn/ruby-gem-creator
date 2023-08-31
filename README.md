@@ -16,6 +16,9 @@ s.homepage = https://homepage.com
 s.license = MIT                                         
 s.metadata = this is a package to create templates
 cookie.writeTemplate("filename")
+
+if your metadata file is large then you can also give the filename and in that case uncomment
+the line for the metadata and it will read from the file.
 ```
 Gaurav Sablok \
 Frontiers: https://loop.frontiersin.org/people/33293/overview \
