@@ -2,7 +2,8 @@
 A ruby class which will create your ruby gem creating easy. It has two methods one to make the template and one to write the template. You can check the template before writing and then simply write the template for gem creation. 
 
 ```
-cookie = CookieGem.new("Gaurav Sablok", "gauravgem.rb", "gauravgem",
+cookie = CookieGem.new
+("Gaurav Sablok", "gauravgem.rb", "gauravgem",
     "This is a ruby gem maker", "0.0.0", "sablokg@gmail.com",
                               "https://homepage.com", "MIT", "this is a package to create templates")
 cookie.templateMaker
