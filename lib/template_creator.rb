@@ -1,4 +1,3 @@
-#! /usr/bin/ruby
 class CookieGem
 =begin
      A cookiclutter for making the ruby gems, provide the variables
