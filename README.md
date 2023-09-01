@@ -1,5 +1,10 @@
 # ruby_gem_creator
-A ruby class which will create your ruby gem creating easy. It has two methods one to make the template and one to write the template. You can check the template before writing and then simply write the template for gem creation. 
+A ruby class which will create your ruby gem creating easy. It has two methods one to make the template and one to write the template. You can check the template before writing and then simply write the template for gem creation. This is now available as a gem [template_creator](https://rubygems.org/gems/template_creator/versions/0.0.1)
+
+```
+gem install template_creator
+require "template_creator"
+```
 
 ```
 cookie = CookieGem.new
