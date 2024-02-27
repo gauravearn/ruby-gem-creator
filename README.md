@@ -27,6 +27,43 @@ cookie.writeTemplate("filename")
 if your metadata file is large then you can also give the filename and in that case uncomment
 the line for the metadata and it will read from the file.
 ```
+if you want to use a prototype version:
+```
+class CookieGem
+  attr_accessor :author, :filename, :name, :summary, :version, :email, :homepage, :license, :metadata
+
+  def initialize(author:, filename:, name:, summary:, version:, email:, homepage:, license:, metadata:)
+    @author = author
+    @filename = filename.split
+    @name = name
+    @summary = summary
+    @version = version
+    @email = email
+    @homepage = homepage
+    @license = license
+    @metadata = metadata
+  end
+
+  def write_template(file)
+    contents = <<-GEMSPEC
+      Gem::Specification.new do |s|
+        s.author = #{@author}
+        s.files = #{@filename}
+        s.name = #{@name}
+        s.summary = #{@summary}
+        s.version = #{@version}
+        s.email = #{@email}
+        s.homepage = #{@homepage}
+        s.license = #{@license}
+        s.metadata = #{@metadata}
+      end
+    GEMSPEC
+    File.write("#{file}.gemspec", contents, mode: "a")
+  end
+end
+```
+
+
 Gaurav Sablok \
 ORCID: https://orcid.org/0000-0002-4157-9405 \
 WOS: https://www.webofscience.com/wos/author/record/C-5940-2014 \
